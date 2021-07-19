@@ -17,11 +17,12 @@ If you use this code in your publication, please cite
 
 ### Running the code
 
-Use the `requirements.txt` to create your python environment.
-Before running any experiment, you need to set your python's home directory to projects root folder, for instance in linux shell:
+Install dependencies from the `requirements.txt` into your python3.6 environment.
+Before running any experiment, you will need to set your python's home directory to projects root folder, for instance in linux shell and make sure you have an en_us locale setting:
 ```
 cd JointSpanExtraction
 export PYTHONPATH=$(pwd)
+export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 ```
 
 To replicate the results, explore the directory `src/scripts/run_files`. The directory contains _hit&run_ scripts, set to run on SQuADv1.1 by default. For instance, you can run compound objective training by executing:
