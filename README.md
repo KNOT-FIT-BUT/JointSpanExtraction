@@ -1,4 +1,4 @@
-This is the official code accompanying our paper __"Rethinking the Objectives of Extractive Question Answering"__.  
+This is the official code accompanying our paper __"[Rethinking the Objectives of Extractive Question Answering](https://arxiv.org/abs/2008.12804)"__.  
 If you use this code in your publication, please cite
 ```
 @article{fajcik2020rethinking,
