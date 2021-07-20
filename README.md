@@ -18,14 +18,17 @@ If you use this code in your publication, please cite
 ### Running the code
 
 Install dependencies from the `requirements.txt` into your python3.6 environment.
-Before running any experiment, you will need to set your python's home directory to projects root folder, for instance in linux shell and make sure you have an en_us locale setting:
+Before running any experiment, you will need to set your python's home directory to project's root folder.Always make sure you have an en_us locale setting.
 ```
+# if you are using conda:
+# conda create --name jointqa python=3.6
 cd JointSpanExtraction
+python -m pip install -r requirements.txt
 export PYTHONPATH=$(pwd)
 export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 ```
 
-To replicate the results, explore the directory `src/scripts/run_files`. The directory contains _hit&run_ scripts, set to run on SQuADv1.1 by default. For instance, you can run compound objective training by executing:
+To replicate our results, explore the directory `src/scripts/run_files`. The directory contains _hit&run_ scripts, set to run on SQuADv1.1 by default. For instance, you can run compound objective training by executing:
 ```
 python src/scripts/run_files/run_transformer_reader_compound.py
 ```
