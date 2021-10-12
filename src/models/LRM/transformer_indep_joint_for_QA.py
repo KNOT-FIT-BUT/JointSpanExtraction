@@ -23,12 +23,12 @@ class TransformerForQuestionAnsweringIndepJoint(torch.nn.Module):
             self.projection = torch.nn.Linear(hidden_size, hidden_size * 2)
             self.reader_logits = torch.nn.Linear(hidden_size, 1)
             self.layer_norm = torch.nn.LayerNorm(hidden_size)
-        elif config["similarity_function"] != "dot_product":
+        elif config["similarity_function"] in ["multi", "add", "multi_add"]:
             self.lin_J_SE = torch.nn.Linear(hidden_size, 1)
             self.lin_J_S = torch.nn.Linear(hidden_size, 1, bias=False)
             self.lin_J_E = torch.nn.Linear(hidden_size, 1, bias=False)
             self.joint_S_linear = torch.nn.Linear(hidden_size, hidden_size)
-        elif config["similarity_function"] == "dot_product":
+        elif config["similarity_function"] == "simple_multi":
             self.joint_S_linear = torch.nn.Linear(hidden_size, hidden_size)
         else:
             raise ValueError(f"Unknown attention type {config['similarity_function']}")

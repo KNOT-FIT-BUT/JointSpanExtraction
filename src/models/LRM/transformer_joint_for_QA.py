@@ -24,12 +24,12 @@ class TransformerForQuestionAnsweringJoint(torch.nn.Module):
             self.projection = torch.nn.Linear(hidden_size, hidden_size * 2)
             self.reader_logits = torch.nn.Linear(hidden_size, 1)
             self.layer_norm = torch.nn.LayerNorm(hidden_size)
-        elif config["similarity_function"] != "dot_product":
+        elif config["similarity_function"] in ["multi", "add", "multi_add"]:
             self.lin_J_SE = torch.nn.Linear(hidden_size, 1)
             self.lin_J_S = torch.nn.Linear(hidden_size, 1, bias=False)
             self.lin_J_E = torch.nn.Linear(hidden_size, 1, bias=False)
             self.joint_S_linear = torch.nn.Linear(hidden_size, hidden_size)
-        elif config["similarity_function"] != "dot_product":
+        elif config["similarity_function"] == "simple_multi":
             self.joint_S_linear = torch.nn.Linear(hidden_size, hidden_size)
         else:
             raise ValueError(f"Unknown attention type {config['similarity_function']}")
@@ -154,7 +154,7 @@ class TransformerForQuestionAnsweringJoint(torch.nn.Module):
         sequence_output = outputs[0]
         sequence_output = sequence_output[:, offset:]
 
-        joint_logits = self.compute_joint_scores(self,sequence_output)
+        joint_logits = self.compute_joint_scores(self, sequence_output)
         if self.masking:
             context_mask = (~token_type_ids[:, offset:].bool() \
                                 if self.inverse_segment_mask else token_type_ids[:, offset:].bool()) \
