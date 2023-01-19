@@ -10,8 +10,8 @@ If you use this code in your publication, please cite
 ```
 
 ### Resources
-* Results of all individual experiments are available [here](https://docs.google.com/spreadsheets/d/1yYCWWLc40WlB-jUNf91oRIom6Pt57Iz73QMhpbwUyCY/edit?usp=sharing).
-* Results of manual analysis from the paper are available [here](https://docs.google.com/spreadsheets/d/1_X1hrzrx31PKV-rIKqPlJJfqeH9I5KWeEQvLRzY9nXU/edit?usp=sharing).
+* Results of all individual experiments are available [here](https://docs.google.com/spreadsheets/d/1_X1hrzrx31PKV-rIKqPlJJfqeH9I5KWeEQvLRzY9nXU/edit?usp=sharing).
+* Results of manual analysis from the paper are available [here](https://docs.google.com/spreadsheets/d/1yYCWWLc40WlB-jUNf91oRIom6Pt57Iz73QMhpbwUyCY/edit?usp=sharing).
 
 
 
