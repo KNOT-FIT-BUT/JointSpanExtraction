@@ -1,11 +1,19 @@
 This is the official code accompanying our paper __"[Rethinking the Objectives of Extractive Question Answering](https://arxiv.org/abs/2008.12804)"__.  
 If you use this code in your publication, please cite
 ```
-@article{fajcik2020rethinking,
-  title={Rethinking the objectives of extractive question answering},
-  author={Fajcik, Martin and Jon, Josef and Kesiraju, Santosh and Smrz, Pavel},
-  journal={arXiv preprint arXiv:2008.12804},
-  year={2020}
+@inproceedings{fajcik-etal-2021-rethinking,
+    title = "Rethinking the Objectives of Extractive Question Answering",
+    author = "Fajcik, Martin  and
+      Jon, Josef  and
+      Smrz, Pavel",
+    booktitle = "Proceedings of the 3rd Workshop on Machine Reading for Question Answering",
+    month = nov,
+    year = "2021",
+    address = "Punta Cana, Dominican Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.mrqa-1.2",
+    doi = "10.18653/v1/2021.mrqa-1.2",
+    pages = "14--27",
 }
 ```
 
